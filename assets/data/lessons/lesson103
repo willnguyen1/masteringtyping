@@ -1,0 +1,44 @@
+<form action="verify.php" method="post">
+    User Name:<br>
+    <input type="text" name="username"><br><br>
+    Password:<br>
+    <input type="password" name="password"><br><br>
+    <input type="submit" name="submit" value="Login">
+</form>
+
+<?php
+if (isset($_POST['submit'])) {
+    $dbHost = "localhost";  //Location Of Database usually its localhost
+    $dbUser = "xxxx";   //Database User Name
+    $dbPass = "xxxxxx";   //Database Password
+    $dbDatabase = "db_name"; //Database Name
+    $db = new PDO("mysql:dbname=$dbDatabase;host=$dbHost;port=3306", $dbUser, $dbPass);
+    $sql = $db->prepare("SELECT * FROM users_table
+        WHERE username = ? AND
+        password = ?
+        LIMIT 1");
+
+    $pas = hash('sha256', $_POST['password']);
+
+    $sql->bindValue(1, $_POST["username"]);
+    $sql->bindValue(2, $pas);
+
+    $sql->execute();
+
+    if ($sql->rowCount() == 1) {
+        $row = $sql->fetch($sql);
+        session_start();
+        $_SESSION['username'] = $row['username'];
+        $_SESSION['fname'] = $row['first_name'];
+        $_SESSION['lname'] = $row['last_name'];
+        $_SESSION['logged'] = TRUE;
+        header("Location: users_page.php");
+        exit;
+    } else {
+        header("Location: login_page.php");
+        exit;
+    }
+} else {
+    header("Location: index.php");
+    exit;
+}

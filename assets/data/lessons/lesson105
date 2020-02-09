@@ -1,0 +1,48 @@
+$('a.top').click(function () {
+    $(document.body).animate({scrollTop: 0}, 800);
+    return false;
+});
+
+$('img').load(function () {
+    console.log('image load successful');
+});
+
+$('img').error(function () {
+    $(this).attr('src', 'img/broken.png');
+});
+
+$('.btn').hover(function () {
+        $(this).addClass('hover');
+    }, function () {
+        $(this).removeClass('hover');
+    }
+);
+
+$('input[type="submit"]').attr('disabled', true);
+
+$('a.no-link').click(function (e) {
+    e.preventDefault();
+});
+
+
+// Fade
+$('.btn').click(function () {
+    $(".element").fadeToggle('slow');
+});
+// Toggle
+$('.btn').click(function () {
+    $(".element").slideToggle('slow');
+});
+
+// Close all Panels
+$('#accordion').find('.content').hide();
+// Accordion
+$('#accordion').find('.accordion-header').click(function () {
+    var next = $(this).next();
+    next.slideToggle('fast');
+    $('.content').not(next).slideUp('fast');
+    return false;
+});
+
+$('.div').css('min-height', $('.main-div').height());
+$('li:odd').css('background', '#E8E8E8');

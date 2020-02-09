@@ -1,0 +1,50 @@
+git init
+git clone (repo_url)
+git clone (repo_url) (folder_name)
+git clone (repo_url) .
+git remote add origin https://github.com/username/(repo_name).git
+git remote add origin git@github.com:username/(repo_name).git
+git remote
+git remote -v
+git remote rm (remote_name)
+git remote set-url origin (git_url)
+git push
+git status
+git diff
+git diff (filename)
+git diff (commit_id)
+git log
+git blame (filename)
+git reset –hard
+git revert HEAD
+git revert (commit_id)
+git add -A
+git add .
+git add -u
+git rm (filename)
+git rm (filename) –cached
+git commit -m “message”
+git commit -am “message”
+git stash
+git stash list
+git stash apply
+git stash apply (stash_id)
+git stash drop (stash_id)
+git push
+git push origin (local_branch_name)
+git tag (tag_name)
+git fetch
+git pull
+git checkout -b (new_branch_name) origin/(branch_name)
+git branch
+git branch -a
+git branch (branch_name)
+git checkout -b (branch_name)
+git checkout (branch_name)
+git push origin (branch_name)
+git checkout -b (new_branch_name) origin/(branch_name)
+git push origin –delete (branch_name)
+git checkout master
+git merge (branch_name)
+git rebase (branch_name)
+git cherry-pick (commit_id)
