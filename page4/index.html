@@ -1,0 +1,1319 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4343717308241619",
+    enable_page_level_ads: true
+  });
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-82679143-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<link rel="shortcut icon" href="/assets/favicon.ico" />
+
+<script>
+  var adminAjax = '/ajaxUrl/data';
+  var ajaxUrl = '/ajaxUrl/data';
+  var homeUrl = '/';
+  window.isAdmin = false;
+  window.currentUserId = 0;
+  window.isUserLoggedIn = false;
+  var randomQuote = '';
+  var isLocalhost = false;
+
+  var currentLocale = 'en';
+  var mtObj = {
+    'lang': 'en'
+  }
+</script>
+
+
+    <meta charset="utf-8">
+<!-- begin _includes/seo.html --><title>Mastering Typing - Page 4</title>
+<meta name="description" content="Practice Typing Speed.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Mastering Typing">
+<meta property="og:title" content="Mastering Typing">
+<meta property="og:url" content="http://localhost:4000/page4/">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/page4/">
+
+
+  <link rel="prev" href="http://localhost:4000/page3/">
+
+
+  <link rel="next" href="http://localhost:4000/page5/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Will Nguyen",
+      "url": "http://localhost:4000/",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="/assets/css/vendor-lib.css?version=2019.11.9">
+<link rel="stylesheet" href="/assets/css/main-app.css?version=2019.11.9">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body class="default-layout">
+      <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+      <div id="header" class="default-color">
+    <div id="header-wrapper">
+        <div class="clearfix">
+            <div class="row">
+                <div class="col-md-12 mt-text">
+                    <div id="logo" class="pull-left">
+                        <a href="/" class="mt-logo">
+                            <span>&nbsp; MT</span></a>
+                    </div><!-- end of #logo -->
+                    <div class="pull-left">
+                        <div class="mtyping-nav">
+                            <ul>
+                                <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                                <li><a href="/quote.html"><i class="fa fa-quote-left" aria-hidden="true"></i> Quote</a></li>
+                                <li><a href="/year-archive/index.html"><i class="fa fa-rss" aria-hidden="true"></i> Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+      <div id="container">
+        <div class="container">
+    <br>
+    <div id="panelTypingStatusId" style="display: none;">
+        <div class="pull-right">
+            <button id="exitDistractionModeBtn" type="button" class="btn btn-default pull-right"
+                    data-toggle="tooltip" title="Exit distraction mode">
+                <i class="fa fa-arrows-alt" aria-hidden="true"></i></button>
+            <h4 style="float: right; margin-right: 20px;"> Press ESC to exit distraction free mode or click on </h4>
+        </div>
+        <br><br>
+    </div>
+    <div id="main-typing-id" class="main-typing">
+        <div id="indicatorTypingId">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="pull-left" style="font-size: 14px;">
+                        <div class="pull-left">
+                            <label><i class="fa fa-tachometer" aria-hidden="true"></i> Speed:
+                            </label>
+                            <div class="pull-right" style="margin-right: 15px;margin-left: 5px;">
+                                <div data-toggle="tooltip" title="Words per Minute.">
+                                    <label id="wpmId" class="indicator-typing-speed">0</label>
+                                    <label style="font-size:x-small;"> wpm</label>
+                                </div>
+                                <div class="mt-sub-indicator" data-toggle="tooltip" title="Characters per minutes.">
+                                    <label id="cpmId" class="indicator-typing-speed">0</label>
+                                    <label> cpm</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pull-left">
+                            <div data-toggle="tooltip" title="Accuracy percentage.">
+                                <label><i class="fa fa-bullseye" aria-hidden="true"> </i> Accuracy:
+                                </label>
+                                <label id="accuracyId" class="indicator-typing-speed">0</label>
+                                <label style="font-size:x-small;margin-right: 10px;margin-left: 5px;"> %</label>
+                            </div>
+                            <div id="progress-indicator" class="pull-left" style="width: 85px;">
+                                <div class="progress" style="max-height: 5px; margin-bottom: 0;" data-toggle="tooltip"
+                                     title="Progress bar shows how many percentage of words left.">
+                                    <div id="successProgressBar" class="progress-bar progress-bar-success"
+                                         role="progressbar"></div>
+                                    <div id="errorProgressBar" class="progress-bar progress-bar-danger"
+                                         role="progressbar"></div>
+                                </div>
+                            </div>
+                            <div class="mt-sub-indicator" data-toggle="tooltip" title="Success words per total words.">
+                                <label id="successInfoId" class="correct">0</label><span> /</span>
+                                <label id="totalWordsInfoId">0</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="pull-left typing-timer">
+                        <i class="fa fa-hourglass-start" aria-hidden="true" style="min-width: 85px;">&nbsp;
+                            <span id="timer" data-toggle="tooltip" title="Timer is counted in second."></span>
+                        </i>
+                    </div>
+                    <div class="pull-right">
+                        <button class="btn themes-btn-6"
+                                onclick="activeTabName('settingsTabId'); myAppUtil.scrollToControlPanel();">
+                            <i class="fa fa-cogs fa-2x" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="pull-right" style="margin-top: -5px; margin-right: 15px; font-size: 11px;">
+                        <label for="selectLangId" data-toggle="tooltip"
+                               title="Choose english text, or other languages (Ex: Hindi, Chinese, ...">
+                            <i class="fa fa-flag" aria-hidden="true"></i> Typing language:
+                        </label>
+                        <br>
+                        <select id="selectLangId" class="form-control smaller-select-box"></select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div id="words">
+            <div id="panel-typing-top" class="panel-top">
+                <div id="word_hint" class="form-control">
+                    <div align="center"><i class="fa fa-spinner fa-spin fa-3x fa-fw">
+                        </i><span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+                <div class="splitter-horizontal" style="margin-top: -8px" align="center" >
+                    <i class="fa fa-minus" aria-hidden="true"></i>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <input id="word_input" type="text" class="form-control input-color">
+                </div>
+                <div class="col-md-4">
+                    <button id="restartBtn" type="button" class="btn pull-left themes-btn-6"
+                            style="width: 50px;border-radius: 50px;">
+                        <span id="restartBtnTextId">&nbsp;<i class="fa fa-play"></i></span>
+                        <span id="restartBtnTextStopId" style="display: none"><i class="fa fa-stop"></i></span>
+                    </button>
+                    <button class="btn pull-left themes-btn-6" style="width: 50px;border-radius: 50px;"
+                            onclick="typingLessons.loadingQuote(this)">
+                        <i class="fa fa-refresh" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+                <div class="row"  align="center">
+                    <div>
+                        <button id="showKeyboardBtnId" class="btn themes-btn-6" data-toggle="tooltip"  data-placement="right" title="Click to show keyboard.">
+                            <i class="fa fa-keyboard-o fa-lg" aria-hidden="true"></i>
+                        </button>
+                        <br>
+                        <div class="form-inline" style="min-width: 1080px;">
+    <div class="fingers-guide form-group">
+        <div class="fingersGuideId">
+            <div>
+            <div id="lfId5" class="finger-guide"></div>
+            <div id="lfId4" class="finger-guide"></div>
+            <div id="lfId3" class="finger-guide"></div>
+            <div id="lfId2" class="finger-guide"></div>
+            <div id="lfId1" class="finger-guide"></div>
+            <div class="fingersPalm finger-guide"></div>
+            </div>
+        </div>
+    </div>
+<div class="keyboardTyping form-group" id="keyboardTypingId" style="display: none;">
+
+    <div class="section-a-Typing">
+        <div class="keyboard">
+            <div class="key-row">
+                <div style="float: right;">
+                    <button id="keyboardSoundInfo"   style="font-size: 10px" class="key-settings" data-toggle="tooltip" title="Sound on/off"></button>
+                    <button id="keyboardFingersInfo" style="font-size: 10px" class="key-settings" data-toggle="tooltip" title="Show/hide fingers guide"></button>
+                    <button id="hideKeyboardBtnId"   style="font-size: 10px" class="key-settings" data-toggle="tooltip" title="Close keyboard"><i class="fa fa-times" aria-hidden="true"></i> </button>
+                </div>
+                <div style="float: right; margin: 4px 20px">
+                    <label id="accuracyModeInfo" class="small" data-toggle="tooltip" title="You are playing in accuracy mode. That means you must type correct every character, otherwise not be able to type the next character. If you don't like this mode, turn off in settings tab"></label>
+                    <label for="chkbx_7" class="small" data-toggle="tooltip" data-placement="right" title="Change keyboard layout between Qwerty or Dvorak.">Keyboard: </label>
+                    <select class="form-control mini-select-box" id="chkbx_7">
+                        <option value="qwerty">Qwerty</option>
+                        <option value="dvorak">Dvorak</option>
+                        <option value="colemak">Colemak</option>
+                        <option value="hindi">Hindi</option>
+                        <option value="armenian">Armenian</option>
+                        <option value="russian">Russian</option>
+                    </select>
+                </div>
+            </div>
+            <div class="key-row">
+                <div id="keyTypingId_192"  class="key square">~<br>`</div>
+                <div id="keyTypingId_49"   class="key square">!<br>1</div>
+                <div id="keyTypingId_50"   class="key square">@<br>2</div>
+                <div id="keyTypingId_51"   class="key square">#<br>3</div>
+                <div id="keyTypingId_52"   class="key square">$<br>4</div>
+                <div id="keyTypingId_53"   class="key square">%<br>5</div>
+                <div id="keyTypingId_54"   class="key square">^<br>6</div>
+                <div id="keyTypingId_55"   class="key square">&amp;<br>7</div>
+                <div id="keyTypingId_56"   class="key square">*<br>8</div>
+                <div id="keyTypingId_57"   class="key square">(<br>9</div>
+                <div id="keyTypingId_48"   class="key square">)<br>0</div>
+                <div id="keyTypingId_189"  class="key square">_<br>-</div>
+                <div id="keyTypingId_187"  class="key square">+<br>=</div>
+                <div id="keyTypingId_8"    class="delete key">Delete</div>
+            </div>
+            <div class="key-row">
+                <div id="keyTypingId_9"    class="key square tab">tab</div>
+                <div id="keyTypingId_81"   class="center key square">q</div>
+                <div id="keyTypingId_87"   class="center key square">w</div>
+                <div id="keyTypingId_69"   class="center key square">e</div>
+                <div id="keyTypingId_82"   class="center key square">r</div>
+                <div id="keyTypingId_84"   class="center key square">t</div>
+                <div id="keyTypingId_89"   class="center key square">y</div>
+                <div id="keyTypingId_85"   class="center key square">u</div>
+                <div id="keyTypingId_73"   class="center key square">i</div>
+                <div id="keyTypingId_79"   class="center key square">o</div>
+                <div id="keyTypingId_80"   class="center key square">p</div>
+                <div id="keyTypingId_219"  class="key square">{<br>[</div>
+                <div id="keyTypingId_221"  class="key square">}<br>]</div>
+                <div id="keyTypingId_220"  class="key square">|<br>\</div>
+            </div>
+            <div class="key-row">
+                <div id="keyTypingId_20"   class="caps key"><br><span class="no-caps">caps lock</span></div>
+                <div id="keyTypingId_65"   class="center key square">a</div>
+                <div id="keyTypingId_83"   class="center key square">s</div>
+                <div id="keyTypingId_68"   class="center key square">d</div>
+                <div id="keyTypingId_70"   class="center key square">f</div>
+                <div id="keyTypingId_71"   class="center key square">g</div>
+                <div id="keyTypingId_72"   class="center key square">h</div>
+                <div id="keyTypingId_74"   class="center key square">j</div>
+                <div id="keyTypingId_75"   class="center key square">k</div>
+                <div id="keyTypingId_76"   class="center key square">l</div>
+                <div id="keyTypingId_186"  class="key square">:<br>;</div>
+                <div id="keyTypingId_222"  class="key square">"<br>'</div>
+                <div id="keyTypingId_13"   class="caps key return"><span class="no-caps">return</span></div>
+            </div>
+            <div class="key-row">
+                <div id="keyTypingId_16"   class="key left shift">shift</div>
+                <div id="keyTypingId_90"   class="center key square">z</div>
+                <div id="keyTypingId_88"   class="center key square">x</div>
+                <div id="keyTypingId_67"   class="center key square">c</div>
+                <div id="keyTypingId_86"   class="center key square">v</div>
+                <div id="keyTypingId_66"   class="center key square">b</div>
+                <div id="keyTypingId_78"   class="center key square">n</div>
+                <div id="keyTypingId_77"   class="center key square">m</div>
+                <div id="keyTypingId_188"  class="key square">&lt;<br>,</div>
+                <div id="keyTypingId_190"  class="key square">&gt;<br>.</div>
+                <div id="keyTypingId_191"  class="key square">?<br>/</div>
+                <div id="keyTypingId_1600" class="key right shift">shift</div>
+            </div>
+            <div class="key-row">
+                <div                        class="bottom key">fn</div>
+                <div  id="keyTypingId_18"   class="bottom key wide">control</div>
+                <div  id="keyTypingId_91"   class="bottom key">option</div>
+                <div  id="keyTypingId_17"   class="bottom command key">command</div>
+                <div  id="keyTypingId_32"   class="key space">&nbsp;</div>
+                <div  id="keyTypingId_1700" class="bottom command key">command</div>
+                <div  id="keyTypingId_9100" class="bottom key">option</div>
+
+                <div class="arrows-wrap">
+                    <div class="middle-arrows">
+                        <div class="arrows-left-right key">&nbsp;</div>
+                    </div>
+                    <div class="middle-arrows">
+                        <div class="arrow-up key">&nbsp;</div>
+                        <div class="arrow-down key">&nbsp;</div>
+                    </div>
+                    <div class="middle-arrows">
+                        <div class="arrows-left-right key">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end section-a-Typing-Typing-->
+
+</div>
+
+    <div class="fingers-guide form-group">
+        <div class="fingersGuideId">
+            <div>
+            <div id="rfId1" class="finger-guide"></div>
+            <div id="rfId2" class="finger-guide"></div>
+            <div id="rfId3" class="finger-guide"></div>
+            <div id="rfId4" class="finger-guide"></div>
+            <div id="rfId5" class="finger-guide"></div>
+            <div class="fingersPalm finger-guide"></div>
+            </div>
+        </div>
+    </div>
+<br>
+<audio id="soundCorrect" preload="auto"><source src="data:audio/mp3;base64,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"></audio>
+<audio id="soundIncorrect" preload="auto"><source src="data:audio/mp3;base64,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"></audio>
+</div>
+                        <div class="pull-left small" style="margin-right: 5px; margin-left: 15px; font-family: 'Segoe UI', Helvetica, sans-serif;">
+                            <div id="languageIndicator"></div>
+                            <br>
+                            <div id="showChangeTypingLangId" class="form-inline"  style="display: none;"
+                                 data-toggle="tooltip" title="This auto detect language might be wrong,because your text is too short to recognize language. Just ignore it, start practice.">
+                                <div id="showChangeTypingLang_lang"></div>
+                                <button id="showChangeTypingLang_langChangeBtn" type="button" class="btn btn-default pull-right"
+                                        style="height: 22px;padding-top:0;margin-left: 5px;">
+                                    <i class="fa fa-flag" aria-hidden="true"></i> Change</button>
+                                <div id="characterRemovedAfterParsingMsg" class="pull-right"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <br>
+
+    <!--row-->
+    <div id="controllerPanelId">
+
+        <ul class="nav nav-tabs mt-nav-tab">
+            <li class="active"><a data-toggle="tab" href="#quotesTabId"><i class="fa fa-quote-left" aria-hidden="true"></i> Quotes</a></li>
+            <li><a data-toggle="tab" href="#textsTabId"><i class="fa fa-files-o" aria-hidden="true"></i>  Texts</a></li>
+            <li><a data-toggle="tab" href="#scoresTabId"><i class="fa fa-bar-chart" aria-hidden="true"></i> Scores</a></li>
+            <li><a data-toggle="tab" href="#settingsTabId"><i class="fa fa-cog fa-lg fa-fw"></i> Settings</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="quotesTabId" class="tab-pane fade in active">
+                <div id="share" style="float: right"></div>
+<br>
+<br>
+<div class="miscellaneousLessons">
+    <div class="row">
+        <div class="col-md-3 col-sm-4">
+            <div class="block-sm-holder">
+                <button onclick="typingLessons.loadingMoreQuotes(this)" class="block-sm" id="default-quote-btn">Inspirational</button>
+            </div>
+            <div class="block-sm-holder">
+                <button onclick="typingLessons.loadingMoreQuotes(this)" class="block-sm">Life</button>
+            </div>
+            <div class="block-sm-holder">
+                <button onclick="typingLessons.loadingMoreQuotes(this)" class="block-sm">Love</button>
+            </div>
+            <div class="block-sm-holder">
+                <button onclick="typingLessons.loadingMoreQuotes(this)" class="block-sm">Positive</button>
+            </div>
+            <div class="block-sm-holder">
+                <button onclick="typingLessons.loadingMoreQuotes(this)" class="block-sm">Motivational</button>
+            </div>
+            <div class="block-sm-holder">
+                <button onclick="typingLessons.loadingMoreQuotes(this)" class="block-sm">Friendship</button>
+            </div>
+            <div class="block-sm-holder">
+                <button onclick="typingLessons.loadingMoreQuotes(this)" class="block-sm">Funny</button>
+            </div>
+            <div class="block-sm-holder">
+                <button onclick="typingLessons.loadingMoreQuotes(this)" class="block-sm">Happiness</button>
+            </div>
+            <hr>
+            <div class="block-sm-holder">
+                <button onclick="typingLessons.loadingRandomText(this); myAppUtil.focusWordInput();"
+                        class="block-sm">Get random text</button>
+            </div>
+        </div>
+        <div class="col-md-9 col-sm-8">
+            <div id="quotes-recommend-id"></div>
+        </div>
+    </div>
+</div>
+
+            </div>
+
+            <div id="settingsTabId" class="tab-pane fade">
+                
+<div class="row">
+<!--left panel-->
+<div class="col-md-6 col-sm-4">
+    <br>
+    <!--Load text button, submit your text-->
+    <label class="blue-ribbon-left" for="textAreaContent" style="font-size: 24px; margin-bottom: 20px;">
+        <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Create your own text</label>
+    <textarea class="form-control" rows="10" id="textAreaContent" maxlength="10000" ondrop="textRender.handleFileSelect(event)"
+              placeholder="Drag and drop file, or copy content here and click Submit button"></textarea>
+    <button id="loadBtn" type="button" class="btn pull-right themes-btn-2"
+            data-toggle="tooltip" title="Your text will be loaded into the main panel and you can start typing test.">
+        <i class="fa fa-upload" aria-hidden="true"></i> Submit your text
+    </button>
+</div>
+<!-- emd left panel-->
+
+<!--right panel-->
+<div class="col-md-6 col-sm-8">
+    <div class="form-group">
+        <br>
+        <!--panel settings-->
+        <label class="blue-ribbon-left"><i class="fa fa-cogs" aria-hidden="true"></i> Mode</label>
+        <div id="collapseOptions">
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div><b><i>Text Transform</i></b></div>
+                        <div class="checkbox">
+                            <label for="chkbx_0" data-toggle="tooltip" data-placement="right" title="(Transform to Lowercase) - All words will be transformed to lower case.">
+                                <input type="checkbox" value="" id="chkbx_0"><span class="margin-r20">Transform to Lowercase</span></label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="chkbx_1"  data-toggle="tooltip" data-placement="right" title="(Only Words, Alphabets) - All words are combined from a-z(A-Z) are allowed.">
+                                <input type="checkbox" value="" id="chkbx_1"><span class="margin-r20">Only Words, Alphabets</span></label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="chkbx_2"  data-toggle="tooltip" data-placement="right" title="(Remove Punctuation)- All special characters will be remove typing test. Ex: !@#$%^&*()_+">
+                                <input type="checkbox" value="" id="chkbx_2"><span class="margin-r20">Remove Punctuation</span></label>
+                        </div>
+                        <hr>
+                        <div><b><i>Typing Mode</i></b></div>
+                        <div class="checkbox">
+                            <label data-toggle="tooltip" data-placement="right" title="(Accuracy Typing Mode) - Must typing correct every character, otherwise you're not be able to type the next character.">
+                                <input type="checkbox" value="" id="chkbx_6"><span class="margin-r20">Accuracy Typing Mode</span></label>
+                        </div>
+                        <div class="checkbox">
+                            <label data-toggle="tooltip" data-placement="right" title="(Modify Previous Word) - When you press backspace, you can back to previous word to correct mistake.">
+                                <input type="checkbox" value="" id="chkbx_3"><span class="margin-r20">Modify Previous Word</span></label>
+                        </div>
+                        <div style="margin-left: 20px;margin-top: -3px;">
+                            <div class="checkbox"><input type="checkbox" value="" id="chkbx_4"></div>
+                            <label for="chkbx_4" data-toggle="tooltip" data-placement="bottom" title="(Countdown) - Set timer count down n minute. If you not select, it will count up.
+                                        Default 1 minutes, max time is 20 minutes, otherwise should unchecked to count up.">
+                                <span class="margin-r20">Countdown <input id="countdownTimeId" type="number" class="form-control mini-input-box" min="1" max="20" value="1"> <?php pll_e('minute(s)</span></label>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div><b><i>Visualization</i></b></div>
+                        <div class="checkbox">
+                            <label data-toggle="tooltip" data-placement="right" title="(Show Fingers Guide) - Used for touch typing beginners.
+                                             Recommend turn it off and try to remember the key after few weeks learning with this fingers guide mode.">
+                                <input type="checkbox" value="" id="chkbx_8">
+                                <span class="margin-r20">Show Fingers Guide  &nbsp;<i class="fa fa-hand-paper-o" aria-hidden="true"></i></span></label>
+                        </div>
+
+                        <div class="checkbox">
+                            <label data-toggle="tooltip" data-placement="right" title="Show the progress bar, keyboard, other information.">
+                                <input type="checkbox" value="" id="chkbx_5">
+                                <span class="margin-r20">Show Keyboard &nbsp;<i class="fa fa-keyboard-o" aria-hidden="true"></i></span></label>
+                        </div>
+                        <div class="checkbox">
+                            <label data-toggle="tooltip" data-placement="right" title="Sound on/off">
+                                <input type="checkbox" value="" id="chkbx_9">
+                                <span class="margin-r20">Sound On/Off &nbsp;<i class="fa fa-volume-down" aria-hidden="true"></i></span></label>
+                        </div>
+                        <div class="checkbox">
+                            <label data-toggle="tooltip" data-placement="right" title="Enter distraction free mode, help you high focus on practice">
+                                <input type="checkbox" value="" id="chkbx_10">
+                                <span class="margin-r20">Distraction Free Mode &nbsp; <i class="fa fa-arrows-alt" aria-hidden="true"></i></span></label>
+                        </div>
+
+                        <div style="clear: both">
+                            <div class="form-group">
+                                <label for="chkbx_11" class="col-sm-3 control-label" data-toggle="tooltip" data-placement="right"
+                                       title="Show lines text">Line(s): </label>
+                                <div class="col-sm-8">
+                                    <select class="form-control mini-select-box" id="chkbx_11">
+                                        <option value="1">1 line</option>
+                                        <option value="2">2 lines</option>
+                                        <option value="3">3 lines</option>
+                                        <option value="4" selected>4 lines</option>
+                                        <option value="5">5 lines</option>
+                                        <option value="6">Max lines</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br><br>
+                        <div>
+                            <button onclick="myAppUtil.settings.resetAllSettings()" type="button" class="btn pull-right btn-default"
+                                    data-toggle="tooltip" title="Reset all settings and clear all data history."
+                                    style="height: 27px; font-size:11px;margin-top: 40px;margin-right: 70px;">
+                                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Reset all
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            <hr>
+        </div>  <!--panel settings-->
+    </div>
+</div>
+<!-- end right panel-->
+</div>
+<div class="row">
+    <div class="col-md-6 col-sm-4"></div>
+<div class="col-md-6 col-sm-8">
+    <label class="blue-ribbon-left"><i class="fa fa-picture-o" aria-hidden="true"></i> Theme color</label>
+            <div>
+                <ul>
+                    <li>Classic Skin</li>
+                </ul>
+                <div>
+                    <button class="btn btn-skin-thumbnail skin-default-thumbnail" onclick="skinSuit.setDefaultSkin()">Default</button>
+                </div>
+                <hr>
+                <ul>
+                    <li>Dark Skin</li>
+                </ul>
+                <div>
+                    <button class="btn btn-skin-thumbnail skin-dark-thumbnail" onclick="skinSuit.setDarkSkin()">Dark</button>
+                    <button class="btn btn-skin-thumbnail skin-brown-thumbnail" onclick="skinSuit.setBrownSkin()">Brown</button>
+                </div>
+                <hr>
+                <ul>
+                    <li>Color Skin</li>
+                </ul>
+                <div>
+                    <button class="btn btn-skin-thumbnail skin-color-1-thumbnail" onclick="skinSuit.setColor_1_Skin()">Green</button>
+                    <button class="btn btn-skin-thumbnail skin-color-fresh-thumbnail" onclick="skinSuit.setColorFreshSkin()">Blue</button>
+                    <button class="btn btn-skin-thumbnail skin-color-bright-thumbnail" onclick="skinSuit.setColorBrightSkin()">Bright</button>
+                    <button class="btn btn-skin-thumbnail skin-color-purple-thumbnail" onclick="skinSuit.setColorPurpleSkin()">Purple</button>
+                    <button class="btn btn-skin-thumbnail skin-color-orange-thumbnail" onclick="skinSuit.setColorOrangeSkin()">Orange</button>
+                </div>
+            </div>
+</div> <!-- End of left panel -->
+
+</div>
+            </div>
+
+            <!-- Texts -->
+            <div id="textsTabId" class="tab-pane fade">
+                <!-- row -->
+<div class="row">
+    <div class="col-md-3 col-sm-4"> <!-- required for floating -->
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs tabs-left"><!-- 'tabs-right' for right tabs -->
+            <!--<li class="active"><a href="#allTextsTabId" data-toggle="tab"><i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp;&nbsp; Texts</a></li>-->
+            <li><a href="#typingLessonsTabId" data-toggle="tab"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Touch Typing Lessons</a></li>
+            <li class="active"><a href="#typingCharactersTabId"    data-toggle="tab"><i class="fa fa-bullseye" aria-hidden="true"></i>&nbsp;&nbsp; Accuracy Lessons</a></li>
+            <li><a href="#typingProgrammingTabId"   data-toggle="tab"><i class="fa fa-code" aria-hidden="true"></i>&nbsp; Programming Lessons</a></li>
+            <!--            <li><a href="#settingsProfileTabId" id="userSettingsBtnId"  data-toggle="tab" ng-if="isAdmin"><i class="fa fa-cogs" aria-hidden="true"></i> Settings</a></li>-->
+        </ul>
+    </div>
+    <div class="col-md-9 col-sm-8">
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <!--<div class="tab-pane active"  id="allTextsTabId">-->
+                <!--    <br>
+    <div class="row">
+        <br>
+        <div id="myTextsTab" class="tab-pane fade">
+            <div class="loading-text-icon" style="display: none;">
+                <div align="center"><i class="fa fa-spinner fa-spin fa-fw"></i><span class="sr-only">Loading...</span></div>
+            </div>
+            <br>
+            <div style="clear:both;"></div>
+            <h4><i class="fa fa-user-o" aria-hidden="true"></i> My Text</h4>
+            <div>
+                <table id="tableMyTexts" class="table table-texts table-condensed td-limit-overflow" cellspacing="0" width="100%">
+                </table>
+            </div>
+        </div>
+    </div>
+-->
+            <!--</div>-->
+
+            <div class="tab-pane" id="typingLessonsTabId">
+                <br>
+                <div class="padding-20">
+    <h3><i class="fa fa-graduation-cap" aria-hidden="true"> </i> Touch Typing Lessons</h3>
+
+    <p><b>Touch typing</b> is a method of typing without the use of the sense of
+        sight, or simply by feeling the keyboard.</p>
+    <p><b><i>Are you still struggling with touch typing? Do you have the hard time to try and fail again?</i></b>
+        Well, we've been research for years to find the best ways to help you learn, practice and improve your typing speed and accuracy.
+        Once you can touch type you will not need to look at the keyboard to find the letters you want to type and you will also be able to type at a much faster speed!</p>
+
+    <p>If you've already known how to touch typing, you should skip this lessons and go to harder lessons to improve your speed.
+        And if you don't know how to touch typing, be patient and keep practice. You can skip one of these lessons to go high if you want or customize your own text.</p>
+    <br><br>
+    <p><b>Here are a list of lessons to help you build the muscle memory</b></p>
+    <div>
+        <button id='lesson-1-btn-id' class="btn btn-lessons" data-toggle="modal" data-target="#openLessonsModal"
+                onclick="typingLessons.loadingContent(this)" value="1"> 1 - Home Row Keys (asdf gh jkl)
+            <i class="fa fa-angle-right pull-right" aria-hidden="true"></i></button>
+
+        <button id='lesson-2-btn-id' class="btn btn-lessons" data-toggle="modal" data-target="#openLessonsModal"
+                onclick="typingLessons.loadingContent(this)" value="2"> 2 - Top Row Keys (qwerty uiop)
+            <i class="fa fa-angle-right pull-right" aria-hidden="true"></i></button>
+
+        <button id='lesson-3-btn-id' class="btn btn-lessons" data-toggle="modal" data-target="#openLessonsModal"
+                onclick="typingLessons.loadingContent(this)" value="3"> 3 - Bottom Row Keys (zxcv bnm)
+            <i class="fa fa-angle-right pull-right" aria-hidden="true"></i></button>
+        <br>
+    </div>
+
+
+    <p><b>Here are extra list of lessons for those weak on left hand or right hand</b></p>
+    <div>
+        <button id='lesson-4-btn-id' class="btn btn-lessons" data-toggle="modal" data-target="#openLessonsModal"
+                onclick="typingLessons.loadingContent(this)" value="4"> 4 - Left Hand Keys only
+            <i class="fa fa-angle-right pull-right" aria-hidden="true"></i></button>
+
+        <button id='lesson-5-btn-id' class="btn btn-lessons" data-toggle="modal" data-target="#openLessonsModal"
+                onclick="typingLessons.loadingContent(this)" value="5"> 5 - Right Hand Keys only
+            <i class="fa fa-angle-right pull-right" aria-hidden="true"></i></button>
+        <button id='lesson-6-btn-id' class="btn btn-lessons" data-toggle="modal" data-target="#openLessonsModal"
+                onclick="typingLessons.loadingContent(this)" value="6"> 6 - Alternates hands when typing
+            <i class="fa fa-angle-right pull-right" aria-hidden="true"></i></button>
+        <br>
+    </div>
+
+    <p><b>Here are final list of lessons of touch typing with full keys.
+            If you feel boring with our text, just copy another text in lower case then practice until you familiar with touch typing.</b></p>
+    <div>
+        <button class="btn btn-lessons" data-toggle="modal" data-target="#openLessonsModal"
+                onclick="typingLessons.loadingContent(this)" value="7"> 7 - The quick brown fox jumps over the lazy dog
+            <i class="fa fa-angle-right pull-right" aria-hidden="true"></i></button>
+        <button class="btn btn-lessons" data-toggle="modal" data-target="#openLessonsModal"
+                onclick="typingLessons.loadingContent(this)" value="8"> 8 - Common words in academic and business writing
+            <i class="fa fa-angle-right pull-right" aria-hidden="true"></i></button>
+        <button class="btn btn-lessons" data-toggle="modal" data-target="#openLessonsModal"
+                onclick="typingLessons.loadingContent(this)" value="9"> 9 - Common words in daily speaking
+            <i class="fa fa-angle-right pull-right" aria-hidden="true"></i></button>
+        <br>
+    </div>
+
+    <p><b>If you feel good about your touch typing, customize your own text and practice to help you more remember the keys.
+            Remember that just focus on remember the keys location first, then practice your speed later.</b></p>
+</div>
+            </div>
+            <div class="tab-pane active" id="typingCharactersTabId">
+                <br>
+                <div class="accuracyLessons padding-20">
+    <div class="row">
+        <div class="col-md-6 col-sm-4">
+            <h3><i class="fa fa-bullseye"></i> Accuracy Lessons</h3>
+            <br>
+            <br>
+
+            <div class="post-tags">
+                <a onclick="typingLessons.getCharLesson('fj')" class="color2">FJ</a>
+                <a onclick="typingLessons.getCharLesson('dk')" class="color1">DK</a>
+                <a onclick="typingLessons.getCharLesson('dfjk')" class="color5">DFJK</a>
+
+                <a onclick="typingLessons.getCharLesson('sl')" class="color11">SL</a>
+                <a onclick="typingLessons.getCharLesson('a;')" class="color1">A;</a>
+                <a onclick="typingLessons.getCharLesson('asl;')" class="color5">ASL;</a>
+
+                <br>
+                <div class="text-center">
+                    <a onclick="typingLessons.getCharLesson('asdfghjkl;')" class="color3">Home row</a>
+                </div>
+                <br>
+                <br>
+
+                <a onclick="typingLessons.getCharLesson('qwe')" class="color2">QWE</a>
+                <a onclick="typingLessons.getCharLesson('iop')" class="color12">IOP</a>
+                <a onclick="typingLessons.getCharLesson('rtyu')" class="color4">RTYU</a>
+
+                <br>
+                <div class="text-center">
+                    <a onclick="typingLessons.getCharLesson('qwertyuiop')" class="color6">Top row</a>
+                </div>
+                <br>
+                <br>
+
+                <a onclick="typingLessons.getCharLesson('zxc')" class="color7">ZXC</a>
+                <a onclick="typingLessons.getCharLesson('vbnm')" class="color8">VBNM</a>
+                <a onclick="typingLessons.getCharLesson(',./')" class="color9">,./</a>
+
+                <br>
+                <div class="text-center">
+                    <a onclick="typingLessons.getCharLesson('zxcvbnm,./')" class="color10">Bottom row</a>
+                </div>
+                <br>
+                <br>
+
+                <a onclick="typingLessons.getCharLesson('123456789')" class="color12">Number Pad</a>
+
+                <a onclick="typingLessons.getCharLesson('Capital')" class="color11">Shift</a>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-8">
+            <br>
+            <br>
+            <br>
+            <br>
+            <label for="slider-alphabet-input">Custom characters</label>
+            <input id="slider-alphabet-input" type="text" class="form-control" value="asfd">
+
+            <br>
+            <label for="slider-character-length">Character length: </label> <label id="slider-character-length-label">5</label>
+            <div id="slider-character-length"></div>
+
+            <label for="slider-text-length">Text length: </label> <label id="slider-text-length-label">50</label>
+            <div id="slider-text-length"></div>
+
+            <label for="slider-alphabet">Alphabet size: </label> <label id="slider-alphabet-label">5</label>
+            <div id="slider-alphabet"></div>
+
+            <hr>
+            <div class="form-group">
+                <label for="accuracyPreviewTextArea">Preview</label>
+                <textarea class="form-control" id="accuracyPreviewTextArea" rows="7"></textarea>
+            </div>
+            <div>
+                <button id="accuracyLessonStartBtn" class="btn themes-btn-5">Start Lesson</button>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+            </div>
+            <div class="tab-pane" id="typingProgrammingTabId">
+                <br>
+                <div class="pLessons padding-20">
+        <h3><i class="fa fa-code"></i> Typing programming lessons</h3>
+        <p><b>Programming lessons</b> are based on open source code, allow you to practice typing the awkward characters that appear in real code. <b><i>These are the lessons for those love programming.</i></b></p>
+        <p>While programming, you can practice typing too. But instead of invoking multiple thought, awkward characters, try and error programming, that will slow down your work.
+           Here we offer these lessons to help focus on correcting a typo, and <b>faster typing on special characters in code.</b></p>
+        <p>These are some snippet code in programming, you can build muscle memory, speed, and accuracy on <b>the useful snippet code.</b>
+            It's not only help typing faster during programming, but  <b><i>also remember the common use code to speed up programming, recall the best algorithm.</i></b></p>
+
+    <br>
+    <ul>
+        <li>
+            <a onclick="typingLessons.loadingContent(this)" value="101" data-toggle="modal" data-target="#openLessonsModal">
+                <span class="pLanguage">C - <span style="color: #4bc380">Sort Algorithm</span></span>
+                <p style="color: red">Quick sort - implementation using array ascending order in C</p>
+                <p class="pDescription">Snippet code - Lines 50</p>
+            </a>
+        </li>
+        <li>
+            <a onclick="typingLessons.loadingContent(this)" value="102" data-toggle="modal" data-target="#openLessonsModal" style="background-color: #ffffff">
+                <span class="pLanguage"><span  style="color: #ff9794;">Objective C</span> - CheckError</span>
+                <p style="color: orange;">Function that extracts human-readable information from OSStatus codes.</p>
+                <p class="pDescription">Snippet code - Lines 17</p>
+            </a>
+        </li>
+        <li>
+            <a onclick="typingLessons.loadingContent(this)" value="103" data-toggle="modal" data-target="#openLessonsModal" style="background-color: #aecdff;">
+                <span class="pLanguage" style="color: #424242;">PHP - Useful Snippet</span>
+                <p style="color:#673ab7;">Simple User Login</p>
+                <p class="pDescription small">From: http://www.phpsnips.com/</p>
+                <p class="pDescription">Line 44</p>
+            </a>
+        </li>
+        <li>
+            <a onclick="typingLessons.loadingContent(this)" value="104" data-toggle="modal" data-target="#openLessonsModal">
+                <span class="pLanguage" style="color: #ff3f38;">HTML5 - CSS3</span>
+                <p>Basics structure - jpeg to ascii converter</p>
+                <p class="pDescription">Line 23</p>
+            </a>
+        </li>
+        <li>
+            <a onclick="typingLessons.loadingContent(this)" value="105" data-toggle="modal" data-target="#openLessonsModal">
+                <span class="pLanguage" style="color: #f44336;">Javascript - jQuery</span>
+                <p style="color: #b96be0;">10 jQuery snippets every designer should know</p>
+                <p class="pDescription">Line 50</p>
+            </a>
+        </li>
+        <li>
+            <a onclick="typingLessons.loadingContent(this)" value="106" data-toggle="modal" data-target="#openLessonsModal" style="background-color: #ffd7d7;">
+                <span class="pLanguage" style="color: #40D84A;">NodeJS - AngularJS</span>
+                <p style="color: #795548;">Redirect http: to https: in Node.js and Express.js</p>
+                <p class="pDescription">Line 24</p>
+            </a>
+        </li>
+        <li>
+            <a onclick="typingLessons.loadingContent(this)" value="107" data-toggle="modal" data-target="#openLessonsModal">
+                <span class="pLanguage" style="color: #00bcd4;">Vim - Vi - Nano</span>
+                <p>Vim Commands Cheat Sheet</p>
+                <p class="pDescription">Line 10</p>
+            </a>
+        </li>
+        <li>
+            <a onclick="typingLessons.loadingContent(this)" value="108" data-toggle="modal" data-target="#openLessonsModal">
+                <span class="pLanguage" style="color: #2196f3;">Linux Command</span>
+                <p>Command basic linux command</p>
+                <p class="pDescription">Line 33</p>
+            </a>
+        </li>
+        <li>
+            <a onclick="typingLessons.loadingContent(this)" value="109" data-toggle="modal" data-target="#openLessonsModal">
+                <span class="pLanguage" style="color: #ea94ff;">Shell Git</span>
+                <p>Basic commands - Cheat sheet</p>
+                <p class="pDescription">Line 50</p>
+            </a>
+        </li>
+    </ul>
+    <hr>
+    <br>
+    <!--    Start customize programming div-->
+     <div>
+        <h4 class="tab-front-of-text">Create your own programming lessons</h4>
+        <div class="row">
+            <div class="col-md-7">
+                <p>All these lessons above is some example from somewhere else that you might not like it.
+                    If you have more useful snippet code, or good snippet code that you love to remember and practice typing, copy it into the settings tab to create your own lessons.</p>
+                <p><b><u>Example: </u></b></p>
+
+                <label>&nbsp;Here are steps:</label>
+                <ol>
+                    <li> Copy all the snippet code from file or website.</li>
+                    <li> Go to the Settings Tab</li>
+                    <li> Paste into the text area, under label "Create your own text"</li>
+                    <li> Click the "Submit your text" button.</li>
+                    <li> <b>There is "Accuracy mode"</b>, if you force yourself to type correct every single characters.</li>
+                    <li> Enjoy your typing lessons! :)</li>
+                </ol>
+            </div>
+            <div class="col-md-5 small">
+                <label for="exampleProgrammingLessonsId"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Select all & copy this example text below</label>
+                <textarea id="exampleProgrammingLessonsId" cols="30" rows="14"
+                          style="font-family: Courier New, Courier, Monaco, monospace;font-weight: bold;font-size: small;background: #ffc;box-shadow: 10px 10px 7px rgba(0,0,0,.7);">// Algorithm of success.
+while (noSuccess) {
+&#0009;tryAgain();
+&#0009;&#0009;if (Dead)
+&#0009;&#0009;&#0009;break;
+}
+
+// Life motto
+function tryAgain() {
+&#0009;if ( sad() === true ) {
+&#0009;&#0009;sad.stop.();
+&#0009;&#0009;beAwesome();
+}</textarea></div>
+        </div>
+    </div> <!--    End instruction customize programming div-->
+</div>
+            </div>
+
+        </div> <!-- End col-md-10 -->
+    </div>
+</div> <!-- End row -->
+
+<div class="modal fade" id="confirmDeleteTextModel" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteTextModelLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title padding-10" id="confirmDeleteTextModelLabel">...</h4>
+            </div>
+
+            <div class="modal-body">
+                <div id="confirmDeleteTextModalContent">...</div>
+            </div>
+
+            <div class="modal-footer">
+                <input type="hidden" name="lessonNumberId" id="confirmDeleteTextHiddenId" value="1">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger" onclick="processWorkshop.deleteText();">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="openLessonsModal" tabindex="-1" role="dialog" aria-labelledby="myLessonsModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title padding-10" id="myLessonsModalLabel">Typing Lesson</h4>
+            </div>
+
+            <div class="modal-body">
+                <div id="myLessonsModalContent" class="padding-20"></div>
+            </div>
+
+            <div class="modal-footer">
+                <input type="hidden" name="lessonNumberId" id="lessonNumberHiddenId" value="1">
+                <button type="button" class="btn themes-btn-5" onclick="typingLessons.startLesson()"><i
+                            class="fa fa-play" aria-hidden="true"></i> Start Lesson
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+
+            <!-- Scores Tab-->
+            <div id="scoresTabId" class="tab-pane fade">
+                <!-- row -->
+<div class="row">
+    <div class="col-md-3 col-sm-4"> <!-- required for floating -->
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs tabs-left"><!-- 'tabs-right' for right tabs -->
+            <li class="active"><a href="#scoreTabId" id="scoreBtn" data-toggle="tab"><i class="fa fa-question" aria-hidden="true"></i>&nbsp; Score</a></li>
+            <li><a href="#chartWpmAndAccTabId" id="statisticsWpmAccuracyChartBtn" data-toggle="tab"><i class="fa fa-line-chart" aria-hidden="true"></i> History</a></li>
+        </ul>
+    </div>
+    <div class="col-md-9 col-sm-8">
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <br>
+
+            <div class="tab-pane active"   id="scoreTabId">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <br><br>
+                        <div id="social-share-id">
+                            <div class="padding-10">
+                                <?php echo do_shortcode('[TheChamp-Counter title="Like us!"]'); ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <table class="table table-score">
+                            <thead><tr>
+                                <th colspan="2">
+                                    <b style="font-weight: bolder;font-size: large;">
+                                        <i class="fa fa-trophy" aria-hidden="true"></i> &nbsp;Your result
+                                    </b>
+                                </th><th></th></tr>
+                            </thead>
+                            <tbody>
+                            <tr><td>Words per minute</td>
+                                <td id="resultWPM" style="font-weight: bolder;font-size: large;"></td>
+                                <td>
+                                    <button id="improve-typing-btn" onclick="activeTabName('textsTabId');activeTabName('typingLessonsTabId');"
+                                            type="button" class="btn themes-btn-2 pull-right" style="margin-top: 0; padding: 3px 6px 3px 6px;">
+                                        <i class="fa fa-rocket" aria-hidden="true"></i> Improve your typing</button>
+                                </td></tr>
+                            <tr><td>Accuracy</td>
+                                <td id="resultAccuracy" style="font-weight: bolder;font-size: large; height: 42px"></td></tr>
+
+                            <tr class="small"><td>Correct Words</td><td id="resultCorrect" class="correct"></td><td></td></tr>
+                            <tr class="small"><td>Incorrect Words</td><td id="resultIncorrect" class="incorrect"></td><td></td></tr>
+                            <tr class="small"><td>Keystrokes</td><td id="resultKeystrokes"></td><td></td></tr>
+                            <tr class="small"><td>CPM</td><td id="resultCPM"></td><td></td></tr>
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                                <td colspan="3">
+                                    <div>
+                                        <!--<div style="float: left; margin-right: 10px">-->
+                                            <!--<div id="shareFbBtn" class="btn" style="background-color: #5888e8; color: #ffffff">-->
+                                                <!--<i class="fa fa-facebook" aria-hidden="true"> </i> Share result!-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                        <div style="float: left; margin-right: 10px">
+                                            <button id="twitterShareBtn" onclick="tweetYourResult()" class="btn" style="background-color: #1dcaff; color: #ffffff">
+                                                <i class="fa fa-twitter" aria-hidden="true"> </i> Tweet it!</button>
+                                        </div>
+
+                                        <button onclick="myAppUtil.focusWordInput()" type="button" class="btn themes-btn-2 pull-right" title="Retry typing test" data-toggle="tooltip" >
+                                            <i class="fa fa-repeat" aria-hidden="true"></i> Retry</button>
+
+                                    </div>
+                                </td></tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <script>
+                        document.getElementById('shareFbBtn').onclick = function() {
+                            FB.ui({
+                                method: 'share',
+                                display: 'popup',
+                                hashtag: '#typingspeed',
+                                href: 'http://masteringtyping.com/',
+                                quote: processTyping.quote,
+                                title: processTyping.result,
+                                description: 'Improve your typing speed at MasteringTyping.com, and compare the result with your friends.'
+                            }, function(response){});
+                        };
+
+                        function tweetYourResult () {
+                            var tweetUrl = 'https://twitter.com/share?' +
+                                'text=' + encodeURIComponent(processTyping.tweetResult) +
+                                '&hashtags=typingspeed,touchtyping,typing' +
+                                '&url=http://masteringtyping.com/';
+
+                            window.open(tweetUrl);
+                        }
+
+                        function googleShareYourResult () {
+                            var googleUrl = 'https://plus.google.com/share?' +
+                                '&url=http://masteringtyping.com/';
+
+                            window.open(googleUrl);
+
+                        }
+
+                    </script>
+                </div>
+
+<!--                Miss word report-->
+                <div class="row">
+                    <label><i class="fa fa-file-text" aria-hidden="true"></i>&nbsp; Your text result</label>
+                    <div id="incorrectWordTextId" class="break-word"></div>
+                </div>
+
+<!--                Typo heatmap-->
+                <div class="row">
+                    <br><br>
+
+                    <label><i class="fa fa-fire" aria-hidden="true"></i> This chart show typo heat map, the most mistake characters are red.</label>
+                    <div id="keyboardTypoId" class="keyboardTypo">
+                        <div class="section-a-typo">
+                            <div class="keyboard">
+                                <div class="key-row">
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_192"  class="key square">~<br>`</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_49"   class="key square">!<br>1</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_50"   class="key square">@<br>2</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_51"   class="key square">#<br>3</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_52"   class="key square">$<br>4</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_53"   class="key square">%<br>5</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_54"   class="key square">^<br>6</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_55"   class="key square">&amp;<br>7</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_56"   class="key square">*<br>8</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_57"   class="key square">(<br>9</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_48"   class="key square">)<br>0</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_189"  class="key square">_<br>-</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_187"  class="key square">+<br>=</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_8"    class="delete key">Delete</div>
+                                </div>
+                                <div class="key-row">
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_9"    class="key square tab">tab</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_81"   class="center key square">q</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_87"   class="center key square">w</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_69"   class="center key square">e</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_82"   class="center key square">r</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_84"   class="center key square">t</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_89"   class="center key square">y</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_85"   class="center key square">u</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_73"   class="center key square">i</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_79"   class="center key square">o</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_80"   class="center key square">p</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_219"  class="key square">{<br>[</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_221"  class="key square">}<br>]</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_220"  class="key square">|<br>\</div>
+                                </div>
+                                <div class="key-row">
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_20"   class="caps key"><br><span class="no-caps">caps lock</span></div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_65"   class="center key square">a</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_83"   class="center key square">s</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_68"   class="center key square">d</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_70"   class="center key square">f</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_71"   class="center key square">g</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_72"   class="center key square">h</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_74"   class="center key square">j</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_75"   class="center key square">k</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_76"   class="center key square">l</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_186"  class="key square">:<br>;</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_222"  class="key square">"<br>'</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_13"   class="caps key return"><span class="no-caps">return</span></div>
+                                </div>
+                                <div class="key-row">
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_16"   class="key left shift">shift</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_90"   class="center key square">z</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_88"   class="center key square">x</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_67"   class="center key square">c</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_86"   class="center key square">v</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_66"   class="center key square">b</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_78"   class="center key square">n</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_77"   class="center key square">m</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_188"  class="key square">&lt;<br>,</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_190"  class="key square">&gt;<br>.</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_191"  class="key square">?<br>/</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_1600" class="key right shift">shift</div>
+                                </div>
+                                <div class="key-row">
+                                    <div                                                               class="bottom key">fn</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_18"   class="bottom key wide">control</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_91"   class="bottom key">option</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_17"   class="bottom command key">command</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_32"   class="key space">.</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_1700" class="bottom command key">command</div>
+                                    <div data-toggle="popoverTypo" data-content="" id="keyTypoId_9100" class="bottom key">option</div>
+
+                                    <div class="arrows-wrap">
+                                        <div class="middle-arrows">
+                                            <div class="arrows-left-right key">&nbsp;</div>
+                                        </div>
+                                        <div class="middle-arrows">
+                                            <div class="arrow-up key">&nbsp;</div>
+                                            <div class="arrow-down key">&nbsp;</div>
+                                        </div>
+                                        <div class="middle-arrows">
+                                            <div class="arrows-left-right key">&nbsp;</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- end section-a-typo-typo-->
+                    </div>
+                    <br><br>
+                    <canvas id="charactersChart" class="chart"></canvas>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div id="chartCharSpeedId"></div>
+                        </div>
+                        <div class="col-md-3 col-md-offset-1">
+                            <div id="chartCharSlowSpeedId"></div>
+                        </div>
+                        <div class="col-md-3 col-md-offset-1">
+                            <div id="chartCharMissId"></div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End Score Tab -->
+
+
+            <div class="tab-pane" id="chartWpmAndAccTabId">
+                <div>
+                    <button onclick="activeTabName('scoreTabId')" type="button" class="btn themes-btn-2 pull-right">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i> Back</button>
+                </div>
+                <br>
+                <div style="min-height: 100px;">
+                    <span>Overview</span>
+                    <canvas id="wpmChart" class="chart"></canvas>
+                </div>
+
+                <div>
+                    <hr>
+                    <div class="form-group">
+                        <label class="pull-left" data-toggle="tooltip" title="No! This is temporary result stored on browser only. Please login to save your result."
+                               style="margin-top: 10px;">Your results history?</label>
+
+                        <button onclick="myAppUtil.settings.clearHistory()" type="button" class="btn pull-right themes-btn-2" data-toggle="tooltip"  title="Clear all results in statistics table">
+                            <i class="fa fa-trash" aria-hidden="true"></i> Clear</button>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <table id="tableResult" class="table table-condensed text-right">
+                        <thead>
+                        <tr>
+                            <th title="Id">No.</th>
+                            <th title="Words per minute (WPM) - This show how many word per minutes you typed">WPM</th>
+                            <th title="Accuracy - Use formula to calculate accuracy factor">Acc</th>
+                            <th title="Amount of time - second unit">Lap</th>
+                            <th title="Show the results (Date - Number of correct text - incorrect text - total of word">
+                                Time - Correct - Error - Total
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div> <!-- End chartWpmAndAccTabId  -->
+
+        </div> <!-- End col-md-10 -->
+    </div>
+</div> <!-- End row -->
+            </div>
+        </div>
+    </div>
+</div>
+<br><br><br>
+
+
+      </div>
+  </body>
+    <div id="footer" class="clearfix default-color block-color-default">
+	<div id="footer-wrapper">
+
+		<div id="authorInfo" class="hide">
+			<div class="post-meta">
+				<span class="meta-prep meta-prep-author posted">Created on </span>
+
+				<a href="http://masteringtyping.com/" title="Mastering Typing" rel="bookmark">
+					<time class="timestamp updated" datetime="2016-08-14T22:59:24+00:00">2016-08-14</time>
+				</a>
+
+				<span class="byline"> by </span><span class="author vcard">
+					<a class="url fn n" href="https://masteringtyping.com/about.html" title="Author: Will Nguyen">Will Nguyen</a>
+				</span>
+			</div>
+		</div>
+
+        <div class="row mt-text">
+            <div class="col-md-6 col-sm-6">
+                <h4><a href="/about.html"  class="footer-light-header-font">About</a></h4>
+                <div>
+    <p>Mastering Typing is a customize typing speed application.<br>
+       Practice your type everyday with text which you love to type.</p>
+    <p>Features:</p>
+    <ul>
+        <li>Choose the quote for typing</li>
+        <li>Create your own text</li>
+        <li>Typing mode (ie. text transformation, typing mode, time count up and down)</li>
+        <li>Correct and extensive performance statistics, chart to analysis typing</li>
+        <li>Support multiple typing language</li>
+    </ul>
+</div>
+
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <h4 class="footer-light-header-font"><a href="/about.html">Section</a></h4>
+                <ul class="footer-light-font">
+                    <li><a href="/about.html">About me</a></li>
+                    <li><a href="/quote.html">Quote</a></li>
+                    <li><a href="/year-archive/index.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <h4><a href="/contact-us.html" class="footer-light-header-font">Contact Me</a></h4>
+                <p>If you have any questions, don't hesitate to contact me</p>
+                <ul>
+                    <li>Email to:<a href="mailto:will.ng.nguyen@gmail.com">will.ng.nguyen@gmail.com</a></li>
+                    <li><a href="https://willnguyen.work">Will Nguyen Profile</a></li>
+                </ul>
+            </div>
+        </div>
+        <br>
+
+		<div class="grid col-940 text-center">
+			<a class="footer-light-font" id="" href="/toc.html" title="Blog">
+				Copyright © 2020 · All Rights Reserved · Mastering Typing</a>
+            <a href="/privacy.html" class="footer-light-font">Privacy Policy</a>
+            <a href="/toc.html" class="footer-light-font">Terms of Service</a>
+		</div>
+
+		<!--		Back to Top -->
+		<div id="scrollToTopId" style="display: none;">
+			<a href="#scroll-top" title="scroll to top"
+			   style='color: #6a6a6a ;cursor: pointer; text-decoration: none; vertical-align: middle; width: 80px; height: 60px; position: fixed; bottom: 15px; right: 15px; display: block;'>
+                <i class="fa fa-angle-double-up" style="font-size: 40px;" aria-hidden="true"></i>
+			</a>
+		</div>
+		<!--		End of Back to Top-->
+	</div><!-- end #footer-wrapper -->
+</div><!-- end #footer -->
+      <script src="/assets/js/main-app.js?version=2019.11.9"></script>
+  <script src="/assets/js/chart-app.js?version=2019.11.9"></script>
+
+</html>

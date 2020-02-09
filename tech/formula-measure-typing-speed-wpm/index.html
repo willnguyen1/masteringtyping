@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4343717308241619",
+    enable_page_level_ads: true
+  });
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-82679143-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<link rel="shortcut icon" href="/assets/favicon.ico" />
+
+<script>
+  var adminAjax = '/ajaxUrl/data';
+  var ajaxUrl = '/ajaxUrl/data';
+  var homeUrl = '/';
+  window.isAdmin = false;
+  window.currentUserId = 0;
+  window.isUserLoggedIn = false;
+  var randomQuote = '';
+  var isLocalhost = false;
+
+  var currentLocale = 'en';
+  var mtObj = {
+    'lang': 'en'
+  }
+</script>
+
+
+    <meta charset="utf-8">
+<!-- begin _includes/seo.html --><title>Formula to measure typing speed in WPM - Mastering Typing</title>
+<meta name="description" content="Measuring typing speedTyping tests measure two things, speed (wpm) and mistakes. So when you take our typing speed test, do not look only at your speed, look also at the number of your mistakes and concentrate on reducing your mistakes in future tests rather than increasing your typing speed. The end result will be increased productivity.To calculating the speed there are two formulas are applied. 	First, Gross_WPM (Words Per Minute) is a calculation of exactly how fast you type with no error penalties. 	Second, Net_WPM calculation is preferred for measuring typing speed as opposed to the Gross_WPM computation. The mistakes is taken into account to give a more complete picture of your true typing abilities.Let me explain those formulas in detail. 	Gross WPM: Gross_WPMHere WPM = Word Per Minute">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Mastering Typing">
+<meta property="og:title" content="Formula to measure typing speed in WPM">
+<meta property="og:url" content="http://localhost:4000/tech/formula-measure-typing-speed-wpm/">
+
+
+  <meta property="og:description" content="Measuring typing speedTyping tests measure two things, speed (wpm) and mistakes. So when you take our typing speed test, do not look only at your speed, look also at the number of your mistakes and concentrate on reducing your mistakes in future tests rather than increasing your typing speed. The end result will be increased productivity.To calculating the speed there are two formulas are applied. 	First, Gross_WPM (Words Per Minute) is a calculation of exactly how fast you type with no error penalties. 	Second, Net_WPM calculation is preferred for measuring typing speed as opposed to the Gross_WPM computation. The mistakes is taken into account to give a more complete picture of your true typing abilities.Let me explain those formulas in detail. 	Gross WPM: Gross_WPMHere WPM = Word Per Minute">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2016-08-27T00:00:00+07:00">
+
+
+
+  <meta property="article:modified_time" content="2016-08-28T04:46:25+07:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/tech/formula-measure-typing-speed-wpm/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Will Nguyen",
+      "url": "http://localhost:4000/",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="/assets/css/vendor-lib.css?version=2019.11.9">
+<link rel="stylesheet" href="/assets/css/main-app.css?version=2019.11.9">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div id="header" class="default-color">
+    <div id="header-wrapper">
+        <div class="clearfix">
+            <div class="row">
+                <div class="col-md-12 mt-text">
+                    <div id="logo" class="pull-left">
+                        <a href="/" class="mt-logo">
+                            <span>&nbsp; MT</span></a>
+                    </div><!-- end of #logo -->
+                    <div class="pull-left">
+                        <div class="mtyping-nav">
+                            <ul>
+                                <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                                <li><a href="/quote.html"><i class="fa fa-quote-left" aria-hidden="true"></i> Quote</a></li>
+                                <li><a href="/year-archive/index.html"><i class="fa fa-rss" aria-hidden="true"></i> Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="initial-content container">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Formula to measure typing speed in WPM">
+    <meta itemprop="description" content="Measuring typing speedTyping tests measure two things, speed (wpm) and mistakes. So when you take our typing speed test, do not look only at your speed, look also at the number of your mistakes and concentrate on reducing your mistakes in future tests rather than increasing your typing speed. The end result will be increased productivity.To calculating the speed there are two formulas are applied. 	First, Gross_WPM (Words Per Minute) is a calculation of exactly how fast you type with no error penalties. 	Second, Net_WPM calculation is preferred for measuring typing speed as opposed to the Gross_WPM computation. The mistakes is taken into account to give a more complete picture of your true typing abilities.Let me explain those formulas in detail. 	Gross WPM: Gross_WPMHere WPM = Word Per Minute">
+    <meta itemprop="datePublished" content="August 27, 2016">
+    <meta itemprop="dateModified" content="August 27, 2016">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Formula to measure typing speed in WPM
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h2>Measuring typing speed</h2>
+<p>Typing tests measure two things, speed (wpm) and mistakes. So when you take our typing speed test, do not look only at your speed, look also at the number of your mistakes and concentrate on reducing your mistakes in future tests rather than increasing your typing speed. The end result will be increased productivity.</p>
+<h4>To calculating the speed there are two formulas are applied.</h4>
+<ul>
+ 	<li>First, Gross_WPM (Words Per Minute) is a calculation of exactly how fast you type with no error penalties.</li>
+ 	<li>Second, Net_WPM calculation is preferred for measuring typing speed as opposed to the Gross_WPM computation. The mistakes is taken into account to give a more complete picture of your true typing abilities.</li>
+</ul>
+<p>Let me explain those formulas in detail.</p>
+<ul>
+ 	<li>
+<h2>Gross WPM:</h2>
+<a href="https://masteringtyping.com/"><img class="wp-image-168 size-full" src="https://masteringtyping.com/assets/uploads/2016/10/Gross_WPM.png" alt="gross wpm" width="470" height="141" /></a> Gross_WPM</li>
+</ul>
+<blockquote>Here WPM = Word Per Minute
+
+All typed entries = Total Key Strokes (or key Press)</blockquote>
+<p>Gross_WPM is really the typing speed that you typed in one minute its getting by total key Stroke (Key pressed) divided by 5 (One word ~ 5 characters) and then divided by total minute to get word per minute speed.</p>
+
+<p><span style="text-decoration: underline;">Example:</span></p>
+<p style="text-align: center;">A student typed 90 words per 2 min with errors in 10 words.</p>
+<p style="text-align: center;">Simple speed = 90 words / 2 min = 45 (wpm)</p>
+<p> </p>
+
+<p>But Gross_WPM is not your actual speed, actual speed is calculating by correct word you typed known as ‘Net_WPM’.</p>
+
+<p><em>Note: delete, backspace, shift and other keys are not calculated.</em></p>
+<ul>
+ 	<li>
+<h2>Net WPM Formula</h2>
+<a href="https://masteringtyping.com/"><img class="wp-image-167 size-full" src="https://masteringtyping.com/assets/uploads/2016/10/Net_WPM.png" alt="net_wpm" width="470" height="193" /></a> Net_WPM</li>
+</ul>
+<p>Net speed can be calculated by deducting errors in Gross_WPM</p>
+
+<p>For example, if you typed 40 Word in 1 Minute but you typed 3 word wrong then your Net_WPM = 40 - 3 = 37 (WPM)</p>
+<ul>
+ 	<li>
+<h2>Accuracy Formula:</h2>
+</li>
+</ul>
+<p>Accuracy is a percentage ratio of Gross and Net Word Speed:</p>
+<blockquote>Accuracy = (Net_WPM / Gross_WPM ) * 100</blockquote>
+<h4>Calculation of Errors</h4>
+<p>Errors are calculated by following two criteria</p>
+<ul>
+ 	<li>Errors that are made and corrected</li>
+ 	<li>Errors that are made and not corrected</li>
+</ul>
+<p> </p>
+<ul>
+ 	<li>
+<h2>Summary</h2>
+</li>
+</ul>
+<p>Gross speed is how many raw WPM and net speed takes into account accuracy percentage.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#tech" class="page__taxonomy-item" rel="tag">tech</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-08-27">August 27, 2016</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Formula+to+measure+typing+speed+in+WPM%20http%3A%2F%2Flocalhost%3A4000%2Ftech%2Fformula-measure-typing-speed-wpm%2Findex.html" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Ftech%2Fformula-measure-typing-speed-wpm%2Findex.html" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Ftech%2Fformula-measure-typing-speed-wpm%2Findex.html" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Ftech%2Fformula-measure-typing-speed-wpm%2Findex.html" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/tech/mechanical-keyboards-affect-typing/index.html" class="pagination--pager" title="Are mechanical keyboards affect your typing?
+">Previous</a>
+    
+    
+      <a href="/tech/worth-switching-dvorak-keyboard/index.html" class="pagination--pager" title="Is it worth switching to Dvorak keyboard?
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/tech/whats-efficient-way-learn-touch-type/index.html" rel="permalink">What’s the most efficient way to learn touch type?
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description"> 
+Touch type is to type using all one's fingers and without looking at the keys.
+ Break the rule, feel the keyboard through your fingers, freestyle touch type
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/tech/refreshing-eye-exercises-computer/index.html" rel="permalink">Refreshing Eyes Exercises at Computer
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description"> 
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/tech/fun-facts-qwerty-typewriter/index.html" rel="permalink">Fun Facts about QWERTY and Typewriter
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description"> Typewriter
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/tech/jobs-require-typing-skills/index.html" rel="permalink">What jobs that require typing skills?
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description"> 
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div id="footer" class="clearfix default-color block-color-default">
+	<div id="footer-wrapper">
+
+		<div id="authorInfo" class="hide">
+			<div class="post-meta">
+				<span class="meta-prep meta-prep-author posted">Created on </span>
+
+				<a href="http://masteringtyping.com/" title="Mastering Typing" rel="bookmark">
+					<time class="timestamp updated" datetime="2016-08-14T22:59:24+00:00">2016-08-14</time>
+				</a>
+
+				<span class="byline"> by </span><span class="author vcard">
+					<a class="url fn n" href="https://masteringtyping.com/about.html" title="Author: Will Nguyen">Will Nguyen</a>
+				</span>
+			</div>
+		</div>
+
+        <div class="row mt-text">
+            <div class="col-md-6 col-sm-6">
+                <h4><a href="/about.html"  class="footer-light-header-font">About</a></h4>
+                <div>
+    <p>Mastering Typing is a customize typing speed application.<br>
+       Practice your type everyday with text which you love to type.</p>
+    <p>Features:</p>
+    <ul>
+        <li>Choose the quote for typing</li>
+        <li>Create your own text</li>
+        <li>Typing mode (ie. text transformation, typing mode, time count up and down)</li>
+        <li>Correct and extensive performance statistics, chart to analysis typing</li>
+        <li>Support multiple typing language</li>
+    </ul>
+</div>
+
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <h4 class="footer-light-header-font"><a href="/about.html">Section</a></h4>
+                <ul class="footer-light-font">
+                    <li><a href="/about.html">About me</a></li>
+                    <li><a href="/quote.html">Quote</a></li>
+                    <li><a href="/year-archive/index.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <h4><a href="/contact-us.html" class="footer-light-header-font">Contact Me</a></h4>
+                <p>If you have any questions, don't hesitate to contact me</p>
+                <ul>
+                    <li>Email to:<a href="mailto:will.ng.nguyen@gmail.com">will.ng.nguyen@gmail.com</a></li>
+                    <li><a href="https://willnguyen.work">Will Nguyen Profile</a></li>
+                </ul>
+            </div>
+        </div>
+        <br>
+
+		<div class="grid col-940 text-center">
+			<a class="footer-light-font" id="" href="/toc.html" title="Blog">
+				Copyright © 2020 · All Rights Reserved · Mastering Typing</a>
+            <a href="/privacy.html" class="footer-light-font">Privacy Policy</a>
+            <a href="/toc.html" class="footer-light-font">Terms of Service</a>
+		</div>
+
+		<!--		Back to Top -->
+		<div id="scrollToTopId" style="display: none;">
+			<a href="#scroll-top" title="scroll to top"
+			   style='color: #6a6a6a ;cursor: pointer; text-decoration: none; vertical-align: middle; width: 80px; height: 60px; position: fixed; bottom: 15px; right: 15px; display: block;'>
+                <i class="fa fa-angle-double-up" style="font-size: 40px;" aria-hidden="true"></i>
+			</a>
+		</div>
+		<!--		End of Back to Top-->
+	</div><!-- end #footer-wrapper -->
+</div><!-- end #footer -->
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

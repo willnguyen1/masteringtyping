@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4343717308241619",
+    enable_page_level_ads: true
+  });
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-82679143-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<link rel="shortcut icon" href="/assets/favicon.ico" />
+
+<script>
+  var adminAjax = '/ajaxUrl/data';
+  var ajaxUrl = '/ajaxUrl/data';
+  var homeUrl = '/';
+  window.isAdmin = false;
+  window.currentUserId = 0;
+  window.isUserLoggedIn = false;
+  var randomQuote = '';
+  var isLocalhost = false;
+
+  var currentLocale = 'en';
+  var mtObj = {
+    'lang': 'en'
+  }
+</script>
+
+
+    <meta charset="utf-8">
+<!-- begin _includes/seo.html --><title>Mastering Typing</title>
+<meta name="description" content="Practice Typing Speed.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Mastering Typing">
+<meta property="og:title" content="Mastering Typing">
+<meta property="og:url" content="http://localhost:4000/quote.html">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/quote.html">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Will Nguyen",
+      "url": "http://localhost:4000/",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="/assets/css/vendor-lib.css?version=2019.11.9">
+<link rel="stylesheet" href="/assets/css/main-app.css?version=2019.11.9">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="default-layout">
+<!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+<div id="header" class="default-color">
+    <div id="header-wrapper">
+        <div class="clearfix">
+            <div class="row">
+                <div class="col-md-12 mt-text">
+                    <div id="logo" class="pull-left">
+                        <a href="/" class="mt-logo">
+                            <span>&nbsp; MT</span></a>
+                    </div><!-- end of #logo -->
+                    <div class="pull-left">
+                        <div class="mtyping-nav">
+                            <ul>
+                                <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                                <li><a href="/quote.html"><i class="fa fa-quote-left" aria-hidden="true"></i> Quote</a></li>
+                                <li><a href="/year-archive/index.html"><i class="fa fa-rss" aria-hidden="true"></i> Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var _brief = {"t": {
+      "i": [78, 61, 120, 68, 7, 69, 105], "d": ["Motivational", "Inspirational", "Wisdom", "Life", "Art", "Love", "Success"]},
+      "a": {"i": [362, 10639, 2292, 11067, 16951, 15294, 98], "d": ["Albert Einstein", "Mahatma Gandhi", "Buddha", "Martin Luther King, Jr.", "William Shakespeare", "Stephen Hawking", "Abraham Lincoln"]},
+      "#": {"i": [4965, 3061, 7834, 3761, 8135, 7518, 4357], "d": ["Never", "Give", "Up", "Improve", "Will", "Today", "Living"]}};
+</script>
+<div id="container" class="container">
+    <br>
+    <div class="quote-site">
+        <div class="row">
+            <div class="col-md-3 col-sm-4">
+                <div class="quote-header"><i class="fa fa-quote-left" aria-hidden="true"></i> Topics</div>
+                <div id="topicsPanel"></div>
+                <button class="btn btn-sm more-quote-btn" onclick="_quote.moreQuoteBy('topics', this)">More topics
+                </button>
+            </div>
+            <div class="col-md-3 col-sm-4 col-md-offset-1">
+                <div class="quote-header"><i class="fa fa-users" aria-hidden="true"></i> Author</div>
+                <div id="authorsPanel"></div>
+                <button class="btn btn-sm more-quote-btn" onclick="_quote.moreQuoteBy('authors', this)">More authors
+                </button>
+            </div>
+            <div class="col-md-3 col-sm-4 col-md-offset-1">
+                <div class="quote-header"><i class="fa fa-tags" aria-hidden="true"></i> Tags</div>
+                <div id="tagsPanel"></div>
+                <button class="btn btn-sm more-quote-btn" onclick="_quote.moreQuoteBy('tags', this)">More tags</button>
+            </div>
+        </div>
+        <hr>
+        <div id="more-quote-by" style="display: none">
+            <table id="table-quote-by" class="table"></table>
+        </div>
+        <div id="panel-quote-by">
+            <div class="row">
+                <div class="col-md-3 col-sm-4">
+                    <div class="quote-header" id="current-quote-by"><i class="fa fa-heart-o" aria-hidden="true"></i> ...
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-md-offset-4">
+                    <div class="quote-header pull-left" id="previous-quote-by"></div>
+                </div>
+            </div>
+            <div style="max-width:1100px; margin:0 auto;">
+                <div class="quote-grid"></div>
+            </div>
+
+            <div align="center" style="clear: both;">
+                <br><br>
+                <button type="button"
+                        class="btn btn-default load-more-button"
+                        style="font-weight: bold; padding: 20px 50px 20px 50px; font-size: larger; color: #696969"
+                        id="load-more">Load more
+                </button>
+                <div class="page-load-status" style="display: none;">
+                    <span class="request"> <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i> </span>
+                    <p class="last" style="display: none;">End of content</p>
+                    <p class="error" style="display: none;">No more pages to load</p>
+                </div>
+                <div id="status-bar-id"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+<div id="footer" class="clearfix default-color block-color-default">
+	<div id="footer-wrapper">
+
+		<div id="authorInfo" class="hide">
+			<div class="post-meta">
+				<span class="meta-prep meta-prep-author posted">Created on </span>
+
+				<a href="http://masteringtyping.com/" title="Mastering Typing" rel="bookmark">
+					<time class="timestamp updated" datetime="2016-08-14T22:59:24+00:00">2016-08-14</time>
+				</a>
+
+				<span class="byline"> by </span><span class="author vcard">
+					<a class="url fn n" href="https://masteringtyping.com/about.html" title="Author: Will Nguyen">Will Nguyen</a>
+				</span>
+			</div>
+		</div>
+
+        <div class="row mt-text">
+            <div class="col-md-6 col-sm-6">
+                <h4><a href="/about.html"  class="footer-light-header-font">About</a></h4>
+                <div>
+    <p>Mastering Typing is a customize typing speed application.<br>
+       Practice your type everyday with text which you love to type.</p>
+    <p>Features:</p>
+    <ul>
+        <li>Choose the quote for typing</li>
+        <li>Create your own text</li>
+        <li>Typing mode (ie. text transformation, typing mode, time count up and down)</li>
+        <li>Correct and extensive performance statistics, chart to analysis typing</li>
+        <li>Support multiple typing language</li>
+    </ul>
+</div>
+
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <h4 class="footer-light-header-font"><a href="/about.html">Section</a></h4>
+                <ul class="footer-light-font">
+                    <li><a href="/about.html">About me</a></li>
+                    <li><a href="/quote.html">Quote</a></li>
+                    <li><a href="/year-archive/index.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <h4><a href="/contact-us.html" class="footer-light-header-font">Contact Me</a></h4>
+                <p>If you have any questions, don't hesitate to contact me</p>
+                <ul>
+                    <li>Email to:<a href="mailto:will.ng.nguyen@gmail.com">will.ng.nguyen@gmail.com</a></li>
+                    <li><a href="https://willnguyen.work">Will Nguyen Profile</a></li>
+                </ul>
+            </div>
+        </div>
+        <br>
+
+		<div class="grid col-940 text-center">
+			<a class="footer-light-font" id="" href="/toc.html" title="Blog">
+				Copyright © 2020 · All Rights Reserved · Mastering Typing</a>
+            <a href="/privacy.html" class="footer-light-font">Privacy Policy</a>
+            <a href="/toc.html" class="footer-light-font">Terms of Service</a>
+		</div>
+
+		<!--		Back to Top -->
+		<div id="scrollToTopId" style="display: none;">
+			<a href="#scroll-top" title="scroll to top"
+			   style='color: #6a6a6a ;cursor: pointer; text-decoration: none; vertical-align: middle; width: 80px; height: 60px; position: fixed; bottom: 15px; right: 15px; display: block;'>
+                <i class="fa fa-angle-double-up" style="font-size: 40px;" aria-hidden="true"></i>
+			</a>
+		</div>
+		<!--		End of Back to Top-->
+	</div><!-- end #footer-wrapper -->
+</div><!-- end #footer -->
+<script src="/assets/js/quote-app.js"></script>
+<script> var isLog = false;var _qhash = {};</script>
+</html>
+
+
+
